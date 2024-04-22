@@ -124,7 +124,7 @@ void Model::setupBuffers()
 }
 
 // Load an .obj model
-void Model::loadObj(const char *path)
+bool Model::loadObj(const char *path)
 {
     
     printf("Loading file %s\n", path);
