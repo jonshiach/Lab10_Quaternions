@@ -135,9 +135,9 @@ int main( void )
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         // Calculate view and projection matrices
+        camera.calculateMatrices(window, deltaTime);
         glm::mat4 view = camera.getViewMatrix();
         glm::mat4 projection = camera.getProjectionMatrix();
-        camera.calculateMatrices(window, deltaTime);
         
         // Activate shader
         glUseProgram(shaderID);
