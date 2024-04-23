@@ -19,10 +19,8 @@ public:
     // Model attributes
     std::vector<glm::vec3> vertices;
     std::vector<glm::vec2> uvs;
-    std::vector<glm::vec3> normals;
     std::vector<Texture> textures;
-    std::vector<glm::vec3> tangents;
-    std::vector<glm::vec3> bitangents;
+    std::vector<glm::vec3> normals;
     
     // Constructor
     Model(const char *path);
@@ -40,8 +38,6 @@ private:
     GLuint vertexBuffer;
     GLuint uvBuffer;
     GLuint normalBuffer;
-    GLuint tangentBuffer;
-    GLuint bitangentBuffer;
     
     // Load .obj file method
     bool loadObj(const char *path);
@@ -51,7 +47,4 @@ private:
     
     // Load texture
     unsigned int loadTexture(const char *path);
-    
-    // Calculate tangents and bitangents
-    void calculateTangents();
 };
